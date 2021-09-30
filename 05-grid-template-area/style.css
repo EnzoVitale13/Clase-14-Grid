@@ -1,0 +1,70 @@
+.container{
+    display: grid;
+    background-color: rgb(165, 248, 149);
+    /* marcamos cuantas columnas y rows queremos, paro ahora con un nombre. si queremos que algo ocupe 3 espacios ponemos ese mismo nombre 3 veces. si queremos que quede vacio, ponemos punto */
+    grid-template-areas: 
+    'header header header'
+    'main main aside'
+    'footer footer footer';
+    width: 100%;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+
+.container .header{
+    grid-area: header;
+    background-color: khaki;
+}
+
+.container .main{
+    /* el grid area va a referirse a una de las areas que hayamos puesto en el padre, y va a heredar el template que le hayamos dado */
+    grid-area: main;
+    background-color: lightblue;
+    height:180px;
+
+}
+
+.container .aside{
+    grid-area: aside;
+    background-color: lightgoldenrodyellow;
+}
+
+.container .footer{
+    grid-area: footer;
+    background-color: lightpink;
+}
+
+/* ******************************** */
+
+.container2 {
+    display: grid;
+    background-color: rgb(165, 248, 149);
+    /* marcamos cuantas columnas y rows queremos, paro ahora con un nombre. si queremos que algo ocupe 3 espacios ponemos ese mismo nombre 3 veces. si queremos que quede vacio, ponemos punto */
+    grid-template-areas: 
+    'header header header'
+    'main aside aside'
+    'main footer footer';
+    width: 100%;
+    height: 200px;
+}
+
+.container2 .header {
+   grid-area: header;
+   background-color: khaki;
+}
+.container2 .main {
+    grid-area: main;
+    background-color: lightblue;
+    height: 180px;
+}
+
+.container2 .aside {
+    grid-area: aside;
+    background-color: lightgoldenrodyellow;
+}
+
+.container2 .footer{
+    grid-area: footer;
+    background-color: lightpink;
+}
